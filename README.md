@@ -29,7 +29,7 @@ To install periodic table module:
 ![alt text](https://github.com/Ayush19-01/GCI-Element-Game/blob/master/1.PNG)
 ### 2.
 
-![alt text](https://github.com/Ayush19-01/GCI-Element-Game/blob/master/2.PNG)
+![alt text](https://github.com/Ayush19-01/GCI-Element-Game/blob/master/2n.PNG)
 ### 3.
 
-![alt text](https://github.com/Ayush19-01/GCI-Element-Game/blob/master/3.PNG)
+![alt text](https://github.com/Ayush19-01/GCI-Element-Game/blob/master/3n.PNG)
