@@ -9,7 +9,7 @@ To install periodic table module:
 #### Rules:
 1) The atomic number of a random element from periodic table would be shown.
 
-2) You have to guess it, the answers are case sensitive, so answer carefully.
+2) You have to guess the symbol of that element, the answers are case sensitive, so answer carefully.
 
 3) You only have 5 lives, if answered incorrectly five times you will lose.
 
