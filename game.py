@@ -4,8 +4,8 @@ import random
 from tkinter import *
 from tkinter import messagebox
 score=0
-dict={}
 dict1={}
+dict2={}
 lives=5
 l=[]
 a=1
@@ -15,15 +15,15 @@ for i in p.elements:
         continue
     else:
         tmp1=i.number
-        dict1[tmp1]=i
-        dict[tmp1]=str(i)
+        dict2[tmp1]=i
+        dict1[tmp1]=str(i)
         l.append(str(i))
 def howto(event):
-    messagebox.showinfo("How to play","Rules:\n1.The atomic number of a random element from periodic table would be shown\n2. You have to guess it, the answers are case sensitive\n3.You only have 5 lives, if answered incorrectly five times you will lose.\n4. Each correct answer gives you 3 points.")
+    messagebox.showinfo("How to play","Rules:\n1.The atomic number of a random element from periodic table would be shown\n2. You have to guess its symbol, the answers are case sensitive\n3.You only have 5 lives, if answered incorrectly five times you will lose.\n4. Each correct answer gives you 3 points.\n5. Hints are also available, get answer gets you the answer but costs a life.")
 
 def hint(event):
     global ele
-    x=dict1[ele]
+    x=dict2[ele]
     y=x.mass
     messagebox.showinfo("Hint","It's Atomic Mass is: "+str(y)+" u")
 def get(event):
@@ -32,7 +32,7 @@ def get(event):
     if lives==1:
         messagebox.showinfo("Error", "Cannot get the answer or you will lose.")
     else:
-        z=dict1[ele]
+        z=dict2[ele]
         x=z.name
         messagebox.showinfo("Answer","The correct answer is "+str(x)+" and it's symbol is "+str(z))
         lives-=1
@@ -51,7 +51,7 @@ def check(event):
     if y not in l:
         messagebox.showinfo("Error","The answer you entered does not exist in the periodic table! Please try a valid element! ")
     if y in l:
-        if y == dict[ele]:
+        if y == dict1[ele]:
             messagebox.showinfo("Correct",Username.get()+", your answer was correct, Good Job!")
             labelm.place_forget()
             label1.place_forget()
