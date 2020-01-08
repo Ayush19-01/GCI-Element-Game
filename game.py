@@ -27,9 +27,21 @@ def hint(event):
     y=x.mass
     messagebox.showinfo("Hint","It's Atomic Mass is: "+str(y)+" u")
 def get(event):
-    z=dict1[ele]
-    x=z.name
-    messagebox.showinfo("Answer","The correct answer is "+str(x)+" and it's symbol is "+str(z))
+    global lives
+    global label4
+    if lives==1:
+        messagebox.showinfo("Error", "Cannot get the answer or you will lose.")
+    else:
+        z=dict1[ele]
+        x=z.name
+        messagebox.showinfo("Answer","The correct answer is "+str(x)+" and it's symbol is "+str(z))
+        lives-=1
+        label4.place_forget()
+        label4 = Label(root2, text="Lives: " + str(lives), font=("roboto", 15), bg="#220047",
+                       fg="#CE9141")
+        label4.place(x=500, y=180)
+
+
 def check(event):
     global lives
     global label4
@@ -52,7 +64,7 @@ def check(event):
 
         else:
             lives-=1
-            if lives==0:
+            if lives<=0:
                 messagebox.showinfo("Incorrect", "Your Answer was incorrect, You lost all your lives, game over\nYour final score was : "+str(score))
                 exit()
             else:
