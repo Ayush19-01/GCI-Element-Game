@@ -105,6 +105,15 @@ def startgame(event):
     root2.resizable(0, 0)
     root2.geometry("600x300")
     gamegui()
+def generate(event):
+    labelm.place_forget()
+    label1.place_forget()
+    label3.place_forget()
+    button2.place_forget()
+    button3.place_forget()
+    entry2.place_forget()
+    gamegui()
+
 def close(event):
     quit()
 def gamegui():
@@ -120,6 +129,7 @@ def gamegui():
     global labelm
     global button4
     global button5
+    global button6
     ele = random.randint(1, 118)
     answer = StringVar()
     root2.config(bg="#220047")
@@ -145,7 +155,7 @@ def gamegui():
     button3 = Button(root2, text="    Submit    ", font=("roboto", 15), bg="#CE9141", fg="#220047", activeforeground="#CE9141",
                      activebackground="#220047")
     button3.bind("<Button-1>", check)
-    button3.place(x=330, y=250)
+    button3.place(x=210, y=250)
 
     button4 = Button(root2, text="   Quit   ", font=("roboto", 15), bg="#CE9141", fg="#220047", activeforeground="#CE9141",
                      activebackground="#220047")
@@ -155,8 +165,13 @@ def gamegui():
     button5 = Button(root2, text="Get Answer", font=("roboto", 15), bg="#CE9141", fg="#220047", activeforeground="#CE9141",
                      activebackground="#220047")
     button5.bind("<Button-1>", get)
-    button5.place(x=150, y=250)
+    button5.place(x=80, y=250)
 
+    button6 = Button(root2, text="Generate Another", font=("roboto", 15), bg="#CE9141", fg="#220047",
+                     activeforeground="#CE9141",
+                     activebackground="#220047")
+    button6.bind("<Button-1>", generate)
+    button6.place(x=350, y=250)
     root2.mainloop()
 
 main1()
